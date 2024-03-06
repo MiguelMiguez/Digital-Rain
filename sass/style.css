@@ -1,0 +1,1231 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.ContainerVistaPrincipal {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4738270308) 0%, rgba(0, 0, 0, 0.437412465) 0%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0.2861519608) 100%), url(../img/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
+}
+
+.ContainerAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+.ContainerAbout .CloudContainer {
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url(/img/nube.png);
+  width: 300px;
+  height: 235px;
+  background-size: cover;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.753));
+  opacity: 0.5;
+}
+.ContainerAbout .blowscontainer {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+.ContainerAbout .blowscontainer .blow {
+  margin-top: -50px;
+  writing-mode: vertical-rl;
+  font-size: 20px;
+  animation: fall 2s ease-in-out infinite;
+  animation-delay: calc(0.4s * var(--index));
+  opacity: 0;
+  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.247);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  z-index: 9998;
+  cursor: default;
+}
+.ContainerAbout .name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 3.5rem;
+  margin-top: 100px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+.ContainerAbout .description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+.ContainerAbout .ScrollButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgb(104, 104, 104);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+.ContainerAbout .ScrollButton .ArrowDown {
+  width: 32px;
+  height: 32px;
+  animation: moveDown 2s ease infinite;
+  filter: brightness(50%);
+  background-image: url(../img/flecha-hacia-abajo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ContainerAbout .ScrollButton:hover {
+  width: 42px;
+  height: 42px;
+  animation: moveDown 2s ease infinite;
+  filter: brightness(50%);
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ContainerAbout span {
+  color: #007DFD;
+}
+
+/* Menu Hamburguesa */
+.MenuHamburguesa {
+  position: fixed;
+  top: 0;
+  right: -1024px;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  border-top-left-radius: 10px;
+  transition: right 0.5s ease;
+  box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.MenuHamburguesa .cruz {
+  height: 50px;
+  width: 50px;
+  margin-right: 1rem;
+  margin-left: 15rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.MenuHamburguesa .cruz:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.MenuHamburguesa ul {
+  list-style-type: none;
+}
+.MenuHamburguesa ul li {
+  margin: 2rem 2rem 0rem 2rem;
+}
+.MenuHamburguesa ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+.MenuHamburguesa ul li a:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.show {
+  right: 0;
+}
+
+.moveLeft {
+  transform: translateX(-300px);
+}
+
+/* navbar */
+.ContainerNavbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+}
+.ContainerNavbar .MenuDesktop {
+  display: none;
+}
+.ContainerNavbar .MenuMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  width: 50px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  transition: transform 0.5s ease, background-color 0.2s ease;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.ContainerNavbar .MenuMobile .line {
+  height: 2px;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+}
+.ContainerNavbar .MenuMobile:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* keyframes */
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px); /* Cambia la distancia del movimiento hacia abajo según lo desees */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fall {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+/* BreakPoints */
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  .ContainerNavbar {
+    justify-content: center;
+    /* box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
+    background-color: rgba(0, 0, 0, 0.418); */
+    position: fixed;
+    z-index: 1000;
+  }
+  .ContainerNavbar .MenuDesktop {
+    display: block;
+    width: 100%;
+  }
+  .ContainerNavbar .MenuDesktop ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+  }
+  .ContainerNavbar .MenuDesktop ul li .inpage {
+    text-decoration: none;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    text-shadow: 0 2px 5px rgb(116, 116, 116);
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s ease;
+    text-transform: lowercase;
+  }
+  .ContainerNavbar .MenuDesktop ul li .inpage:hover {
+    border-bottom: 1px solid #007DFD;
+    color: #007DFD;
+  }
+  .ContainerNavbar .MenuMobile {
+    display: none;
+  }
+  .ContainerAbout .blowscontainer {
+    padding-top: 2.5rem;
+  }
+  .ContainerAbout .name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    padding-bottom: 0.5rem;
+  }
+  .ContainerAbout .description {
+    font-size: 1.5rem;
+    padding: 1rem 0rem 1rem 0rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .ContainerNavbar {
+    justify-content: center;
+    /* box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
+    background-color: rgba(0, 0, 0, 0.418); */
+    position: fixed;
+    z-index: 1000;
+  }
+  .ContainerNavbar .MenuDesktop {
+    display: block;
+    width: 100%;
+  }
+  .ContainerNavbar .MenuDesktop ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+  }
+  .ContainerNavbar .MenuDesktop ul li .inpage {
+    text-decoration: none;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    text-shadow: 0 2px 5px rgb(116, 116, 116);
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s ease;
+    text-transform: lowercase;
+  }
+  .ContainerNavbar .MenuDesktop ul li .inpage:hover {
+    border-bottom: 1px solid #000000;
+  }
+  .ContainerNavbar .MenuMobile {
+    display: none;
+  }
+  .ContainerAbout .name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    padding-bottom: 0.5rem;
+  }
+}
+.TittleLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+.TittleLeft .Tittles {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #404258;
+  width: 250px;
+  opacity: 1;
+  transform: translateX(-100%);
+  transition: opacity 0.8s, transform 1.5s;
+}
+.TittleLeft .TittleLine {
+  width: 300px;
+  background-color: #404258;
+  height: 1px;
+}
+.TittleLeft.appear .Tittles {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.TittleLeftWhite {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+.TittleLeftWhite .Tittles {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 250px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.8s, transform 1.5s;
+}
+.TittleLeftWhite .TittleLine {
+  width: 300px;
+  background-color: #ffffff;
+  height: 1px;
+}
+.TittleLeftWhite.appear .Tittles {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.TittleRightWhite {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+.TittleRightWhite .Tittles {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  color: #ffffff;
+  text-align: end;
+  text-transform: uppercase;
+  width: 250px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s, transform 1.5s;
+}
+.TittleRightWhite .TittleLine {
+  width: 300px;
+  background-color: #ffffff;
+  height: 1px;
+}
+.TittleRightWhite.appear .Tittles {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .TittleLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .TittleLeft .Tittles {
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 300px;
+  }
+  .TittleLeft .TittleLine {
+    width: 400px;
+    background-color: #404258;
+    height: 1px;
+    border-radius: 2px;
+  }
+  .TittleRight {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .TittleRight .Tittles {
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 300px;
+  }
+  .TittleRight .TittleLine {
+    width: 400px;
+    background-color: #404258;
+    height: 1px;
+    border-radius: 2px;
+  }
+  .TittleRightWhite {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .TittleRightWhite .Tittles {
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 300px;
+  }
+  .TittleRightWhite .TittleLine {
+    width: 400px;
+    background-color: white;
+    height: 1px;
+    border-radius: 2px;
+  }
+  .TittleLeftWhite {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .TittleLeftWhite .Tittles {
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 300px;
+  }
+  .TittleLeftWhite .TittleLine {
+    width: 400px;
+    background-color: white;
+    height: 1px;
+    border-radius: 2px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .TittleLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 4rem 4rem 1rem 4rem;
+  }
+  .TittleLeft .Tittles {
+    font-size: 3rem;
+    font-weight: 300;
+    width: 400px;
+  }
+  .TittleLeft .TittleLine {
+    width: 400px;
+    background-color: #404258;
+    height: 2px;
+    border-radius: 2px;
+  }
+  .TittleRight {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 4rem 4rem 1rem 4rem;
+  }
+  .TittleRight .Tittles {
+    font-size: 3rem;
+    font-weight: 300;
+    width: 400px;
+  }
+  .TittleRight .TittleLine {
+    width: 400px;
+    background-color: #404258;
+    height: 1px;
+    border-radius: 2px;
+  }
+  .TittleRightWhite {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 4rem 4rem 1rem 4rem;
+  }
+  .TittleRightWhite .Tittles {
+    font-size: 3rem;
+    font-weight: 300;
+    width: 400px;
+  }
+  .TittleRightWhite .TittleLine {
+    width: 400px;
+    background-color: white;
+    height: 1px;
+    border-radius: 2px;
+  }
+  .TittleLeftWhite {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 4rem 4rem 1rem 4rem;
+  }
+  .TittleLeftWhite .Tittles {
+    font-size: 3rem;
+    font-weight: 300;
+    width: 400px;
+  }
+  .TittleLeftWhite .TittleLine {
+    width: 400px;
+    background-color: white;
+    height: 1px;
+    border-radius: 2px;
+  }
+}
+.ContainerServices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.ContainerAllServices {
+  background-color: black;
+  box-shadow: 0 0px 20px 1px rgba(0, 0, 0, 0.548);
+}
+
+.ContainerCardServices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #007DFD;
+  box-shadow: 0px 15px 20px rgba(8, 8, 8, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 50px;
+  width: 350px;
+  height: 450px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+.ContainerCardServices .TittleCard {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 1rem 2rem 1rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0px 2px rgb(255, 255, 255);
+  padding-top: 2rem;
+  letter-spacing: 2.5px;
+}
+.ContainerCardServices .ImgCard {
+  display: none;
+  width: 152px;
+  height: 110px;
+  margin: 2rem;
+}
+.ContainerCardServices .TextCard {
+  list-style: none;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 0 0px 3px rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 300;
+}
+
+.ContainerCardServices.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ContainerCardServices:hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 15px 25px rgba(11, 102, 155, 0.514);
+  transition: transform 0.5s ease;
+}
+
+span {
+  color: #007DFD;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .ContainerServices {
+    flex-direction: row;
+    min-height: 70vh;
+    gap: 1rem;
+  }
+  .ContainerCardServices {
+    width: 220px;
+    height: 410px;
+  }
+  .ContainerCardServices .TittleCard {
+    font-size: 1rem;
+    text-align: center;
+    height: 40px;
+  }
+  .ContainerCardServices .ImgCard {
+    display: none;
+    width: 180px;
+    height: 160px;
+    padding: 0.5rem;
+  }
+  .ContainerCardServices .ListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ContainerCardServices .ListContainer .TextCard {
+    list-style: none;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding: 2rem 0.7rem 0rem 0.7rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+  .ContainerServices {
+    flex-direction: row;
+    padding-bottom: 6rem;
+  }
+  .ContainerCardServices {
+    width: 300px;
+    height: 450px;
+  }
+  .ContainerCardServices .TittleCard {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 3rem;
+    width: 230px;
+    height: 90px;
+  }
+  .ContainerCardServices .ImgCard {
+    display: none;
+    width: 180px;
+    height: 160px;
+    padding: 0.5rem;
+  }
+  .ContainerCardServices .ListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    gap: 2rem;
+  }
+  .ContainerCardServices .ListContainer .TextCard {
+    list-style: none;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .ContainerServices {
+    flex-direction: row;
+    padding-top: 5rem;
+  }
+  .ContainerCardServices {
+    width: 400px;
+    height: 570px;
+  }
+  .ContainerCardServices .TittleCard {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 4rem;
+    text-transform: uppercase;
+    height: 70px;
+  }
+  .ContainerCardServices .ImgCard {
+    display: none;
+    width: 180px;
+    height: 160px;
+    padding: 0.5rem;
+  }
+  .ContainerCardServices .ListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+  .ContainerCardServices .ListContainer .TextCard {
+    list-style: none;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    padding-top: 2rem;
+  }
+  .ContainerAllServices {
+    min-height: 100vh;
+  }
+}
+.ContainerElegirnos {
+  display: flex;
+  flex-direction: column;
+  background-color: #222222;
+  text-align: center;
+  padding-bottom: 2rem;
+  box-shadow: 0 0px 50px 10px rgba(0, 0, 0, 0.548);
+  min-height: 50vh;
+}
+.ContainerElegirnos .ElegirnosText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ContainerElegirnos .ElegirnosText #TextElegirnos {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 2rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  text-shadow: 0 0px 5px rgb(0, 0, 0);
+}
+
+span {
+  color: #007DFD;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .ContainerElegirnos .ElegirnosText #TextElegirnos {
+    font-size: 1.8rem;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.5px;
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+  .ContainerElegirnos {
+    min-height: 60vh;
+  }
+  .ContainerElegirnos .ElegirnosText #TextElegirnos {
+    font-size: 2rem;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .ContainerElegirnos {
+    min-height: 90vh;
+  }
+  .ContainerElegirnos .ElegirnosText {
+    height: 70vh;
+  }
+  .ContainerElegirnos .ElegirnosText #TextElegirnos {
+    font-size: 3rem;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    padding: 3rem 10rem 3rem 10rem;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+  }
+}
+.TipoServiceLeft {
+  box-shadow: 0 0px 50px 10px rgba(0, 0, 0, 0.548);
+}
+.TipoServiceLeft .InfoServiceLeft {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-70px);
+  transition: opacity 0.8s, transform 1.5s;
+}
+.TipoServiceLeft .ImgService {
+  width: 300px;
+  height: 300px;
+  margin: 2rem;
+  transition: 1s;
+}
+.TipoServiceLeft .TextInfoService {
+  text-align: center;
+  margin: 2rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 200;
+}
+.TipoServiceLeft .ImgService:hover {
+  transform: scale(1.05);
+}
+.TipoServiceLeft .InfoServiceLeft.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.TipoServiceRight {
+  box-shadow: 0 0px 50px 10px rgba(0, 0, 0, 0.548);
+  background-color: #222222;
+}
+.TipoServiceRight .InfoServiceRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-70px);
+  transition: opacity 0.8s, transform 1.5s;
+}
+.TipoServiceRight .ImgService {
+  width: 300px;
+  height: 300px;
+  margin: 2rem;
+  transition: 1s;
+}
+.TipoServiceRight .TextInfoService {
+  text-align: center;
+  margin: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 1.5px;
+  font-weight: 200;
+}
+.TipoServiceRight .TextInfoServiceBlack {
+  text-align: center;
+  margin: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 1.5px;
+  font-weight: 200;
+}
+.TipoServiceRight .ImgService:hover {
+  transform: scale(1.05);
+}
+.TipoServiceRight .InfoServiceRight.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .TipoServiceLeft .InfoServiceLeft {
+    flex-direction: row;
+  }
+  .TipoServiceLeft .InfoServiceLeft .ImageDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .TipoServiceLeft .InfoServiceLeft .TextInfoService {
+    text-align: start;
+    width: 50%;
+  }
+  .TipoServiceRight .InfoServiceRight {
+    flex-direction: row;
+  }
+  .TipoServiceRight .InfoServiceRight .ImageDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .TipoServiceRight .InfoServiceRight .TextInfoService {
+    text-align: end;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .TipoServiceLeft .InfoServiceLeft {
+    flex-direction: row;
+  }
+  .TipoServiceLeft .ImageDiv {
+    width: 50%;
+  }
+  .TipoServiceLeft .ImageDiv .ImgService {
+    width: 400px;
+    height: 400px;
+    margin: 2rem;
+  }
+  .TipoServiceLeft .TextInfoService {
+    text-align: start;
+    font-size: 1.5rem;
+    width: 50%;
+  }
+  .TipoServiceRight .InfoServiceRight {
+    flex-direction: row;
+  }
+  .TipoServiceRight .ImageDiv {
+    width: 50%;
+  }
+  .TipoServiceRight .ImageDiv .ImgService {
+    width: 400px;
+    height: 400px;
+    margin: 2rem;
+  }
+  .TipoServiceRight .TextInfoService {
+    text-align: end;
+    font-size: 1.5rem;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .TipoServiceLeft .InfoServiceLeft {
+    flex-direction: row;
+  }
+  .TipoServiceLeft .ImageDiv {
+    width: 50%;
+  }
+  .TipoServiceLeft .ImageDiv .ImgService {
+    width: 500px;
+    height: 500px;
+    margin: 2rem;
+  }
+  .TipoServiceLeft .TextInfoService {
+    width: 50%;
+    text-align: start;
+    font-size: 1.7rem;
+  }
+  .TipoServiceRight .InfoServiceRight {
+    flex-direction: row;
+  }
+  .TipoServiceRight .ImageDiv {
+    width: 50%;
+  }
+  .TipoServiceRight .ImageDiv .ImgService {
+    width: 500px;
+    height: 500px;
+    margin: 2rem;
+  }
+  .TipoServiceRight .TextInfoService {
+    width: 50%;
+    text-align: end;
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .TipoServiceLeft {
+    min-height: 100vh;
+  }
+  .TipoServiceLeft .InfoServiceLeft {
+    flex-direction: row;
+  }
+  .TipoServiceLeft .ImageDiv .ImgService {
+    width: 600px;
+    height: 600px;
+    margin: 2rem;
+  }
+  .TipoServiceLeft .TextInfoService {
+    text-align: start;
+    font-size: 2rem;
+    width: 50%;
+  }
+  .TipoServiceRight {
+    min-height: 100vh;
+  }
+  .TipoServiceRight .InfoServiceRight {
+    flex-direction: row;
+  }
+  .TipoServiceRight .ImageDiv .ImgService {
+    width: 600px;
+    height: 600px;
+    margin: 2rem;
+  }
+  .TipoServiceRight .TextInfoService {
+    text-align: end;
+    font-size: 2rem;
+    width: 50%;
+  }
+}
+.ContainerForm {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.TextForm {
+  text-align: start;
+  padding: 1rem 2rem 1rem 2rem;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.FormGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem;
+  /* button{
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      background-color: #007DFD;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid #505050b0;
+      box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+      margin: 2rem;
+  } */
+}
+.FormGroup label {
+  width: 60px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+.FormGroup input {
+  width: 300px;
+  border-radius: 20px;
+  padding: 0.4rem;
+  border: 1px solid rgba(80, 80, 80, 0.6901960784);
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+.FormGroup button {
+  padding: 1.3rem 2rem;
+  margin: 2rem;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.FormGroup button:hover {
+  background-color: #007DFD;
+  box-shadow: 0px 15px 20px rgba(42, 170, 245, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.FormGroup button:active {
+  transform: translateY(-1px);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .ContainerInfoForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .ContainerInfoForm .ContainerTextForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .ContainerInfoForm .ContainerTextForm .TextForm {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .ContainerInfoForm form {
+    width: 50%;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .ContainerInfoForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .ContainerInfoForm .ContainerTextForm {
+    width: 50%;
+  }
+  .ContainerInfoForm .ContainerTextForm .TextForm {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  .ContainerInfoForm form {
+    width: 50%;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .ContainerInfoForm form input {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ContainerInfoForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    min-height: 50vh;
+  }
+  .ContainerInfoForm .ContainerTextForm {
+    width: 50%;
+  }
+  .ContainerInfoForm .ContainerTextForm .TextForm {
+    font-size: 3rem;
+    padding: 1rem 1rem 1rem 5rem;
+  }
+  .ContainerInfoForm form {
+    width: 50%;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .ContainerInfoForm form input {
+    width: 400px;
+    height: 30px;
+  }
+}
+.FooterContainer {
+  height: 200px;
+  width: 100%;
+  background-color: rgb(50, 50, 50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.FooterContainer .nameLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.FooterContainer .nameLogo .logoFooter {
+  width: 100px;
+  height: 100px;
+}
+.FooterContainer .nameLogo .nameFooter {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 30px;
+}
+.FooterContainer .reserved {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */

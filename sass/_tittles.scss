@@ -1,0 +1,268 @@
+.TittleLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem 1rem 1rem 1rem;
+    
+    
+        .Tittles{
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;;
+            font-weight: 200;
+            text-transform: uppercase;
+            color: #404258;
+            width: 250px;
+            opacity: 1;
+            transform: translateX(-100%);
+            transition: opacity 0.8s, transform 1.5s;
+        }
+        .TittleLine{
+            width: 300px;
+            background-color: #404258;
+            height: 1px;
+        }
+
+        &.appear {
+            .Tittles {
+              opacity: 1;
+              transform: translateX(0);
+            }
+        }
+}
+
+
+
+.TittleLeftWhite {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem 1rem 1rem 1rem;
+    
+  
+    .Tittles {
+      font-size: 2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      text-transform: uppercase;
+      color: #ffffff;
+      width: 250px;
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: opacity 0.8s, transform 1.5s;
+    }
+  
+    .TittleLine {
+      width: 300px;
+      background-color: #ffffff;
+      height: 1px;
+    }
+  
+    &.appear {
+      .Tittles {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+}
+
+.TittleRightWhite{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 2rem 1rem 1rem 1rem;
+    
+        .Tittles{
+            font-size: 2rem;
+            font-family: $font;
+            font-weight: 200;
+            color: #ffffff;
+            text-align: end;
+            text-transform: uppercase;
+            width: 250px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: opacity 0.8s, transform 1.5s;
+        }
+        .TittleLine{
+            width: 300px;
+            background-color: #ffffff;
+            height: 1px;
+        }
+        &.appear {
+            .Tittles {
+              opacity: 1;
+              transform: translateX(0);
+            }
+        }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    
+   
+    .TittleLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 2rem 1rem 2rem 1rem;
+        
+            .Tittles{
+                font-size: 2.5rem;
+                font-weight: 300;
+                width: 300px;
+            }
+            .TittleLine{
+                width: 400px;
+                background-color: #404258;
+                height: 1px;
+                border-radius: 2px;
+            }
+    }
+
+    .TittleRight{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        padding: 2rem 1rem 2rem 1rem;
+        
+            .Tittles{
+                font-size: 2.5rem;
+                font-weight: 300;
+                width: 300px;
+            }
+            .TittleLine{
+                width: 400px;
+                background-color: #404258;
+                height: 1px;
+                border-radius: 2px;
+            }
+    }
+    
+    .TittleRightWhite{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        padding: 2rem 1rem 2rem 1rem;
+        
+            .Tittles{
+                font-size: 2.5rem;
+                font-weight: 300;
+                width: 300px;
+            }
+            .TittleLine{
+                width: 400px;
+                background-color: white;
+                height: 1px;
+                border-radius: 2px;
+            }
+    }
+
+    .TittleLeftWhite{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 2rem 1rem 2rem 1rem;
+        
+            .Tittles{
+                font-size: 2.5rem;
+                font-weight: 300;
+                width: 300px;
+            }
+            .TittleLine{
+                width: 400px;
+                background-color: white;
+                height: 1px;
+                border-radius: 2px;
+            }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+   
+    .TittleLeft{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 4rem 4rem 1rem 4rem;
+        
+            .Tittles{
+                font-size: 3rem;
+                font-weight: 300;
+                width: 400px;
+            }
+            .TittleLine{
+                width: 400px;
+                background-color: #404258;
+                height: 2px;
+                border-radius: 2px;
+            }
+    }
+
+    .TittleRight{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        padding: 4rem 4rem 1rem 4rem;
+        
+            .Tittles{
+                font-size: 3rem;
+                font-weight: 300;
+                width: 400px;
+            }
+            .TittleLine{
+                width: 400px;
+                background-color: #404258;
+                height: 1px;
+                border-radius: 2px;
+            }
+    }
+
+    .TittleRightWhite{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        padding: 4rem 4rem 1rem 4rem;
+        
+            .Tittles{
+                font-size: 3rem;
+                font-weight: 300;
+                width: 400px;
+            }
+            .TittleLine{
+                width: 400px;
+                background-color: white;
+                height: 1px;
+                border-radius: 2px;
+            }
+    }
+
+    .TittleLeftWhite{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 4rem 4rem 1rem 4rem;
+        
+            .Tittles{
+                font-size: 3rem;
+                font-weight: 300;
+                width: 400px;
+            }
+            .TittleLine{
+                width: 400px;
+                background-color: white;
+                height: 1px;
+                border-radius: 2px;
+            }
+    }
+}
+  
