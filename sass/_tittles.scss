@@ -13,9 +13,10 @@
             text-transform: uppercase;
             color: #404258;
             width: 250px;
-            opacity: 1;
             transform: translateX(-100%);
-            transition: opacity 0.8s, transform 1.5s;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s, transform 1.5s, visibility 0s 1.5s;
         }
         .TittleLine{
             width: 300px;
@@ -25,8 +26,10 @@
 
         &.appear {
             .Tittles {
-              opacity: 1;
-              transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+                transition: opacity 0.8s, transform 1.5s, visibility 0s;
             }
         }
 }
@@ -48,9 +51,10 @@
       text-transform: uppercase;
       color: #ffffff;
       width: 250px;
-      opacity: 0;
       transform: translateX(-100%);
-      transition: opacity 0.8s, transform 1.5s;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.8s, transform 1.5s, visibility 0s 1.5s;
     }
   
     .TittleLine {
@@ -62,41 +66,48 @@
     &.appear {
       .Tittles {
         opacity: 1;
+        visibility: visible;
         transform: translateX(0);
+        transition: opacity 0.8s, transform 1.5s, visibility 0s;
       }
     }
 }
 
-.TittleRightWhite{
+.TittleRightWhite {
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: center;
     padding: 2rem 1rem 1rem 1rem;
-    
-        .Tittles{
-            font-size: 2rem;
-            font-family: $font;
-            font-weight: 200;
-            color: #ffffff;
-            text-align: end;
-            text-transform: uppercase;
-            width: 250px;
-            opacity: 0;
-            transform: translateX(100%);
-            transition: opacity 0.8s, transform 1.5s;
-        }
-        .TittleLine{
-            width: 300px;
-            background-color: #ffffff;
-            height: 1px;
-        }
-        &.appear {
-            .Tittles {
-              opacity: 1;
-              transform: translateX(0);
-            }
-        }
+  
+    .Tittles {
+      font-size: 2rem;
+      font-family: $font;
+      font-weight: 200;
+      color: #ffffff;
+      text-align: end;
+      text-transform: uppercase;
+      width: 250px;
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.8s, transform 1.5s, visibility 0s 1.5s;
+    }
+  
+    .TittleLine {
+      width: 300px;
+      background-color: #ffffff;
+      height: 1px;
+    }
+  
+    &.appear {
+      .Tittles {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        transition: opacity 0.8s, transform 1.5s, visibility 0s;
+      }
+    }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
