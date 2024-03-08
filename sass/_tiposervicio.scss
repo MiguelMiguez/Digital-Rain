@@ -2,8 +2,8 @@
     box-shadow: 0 0px 50px 10px rgba(0, 0, 0, 0.548);
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: auto;
+    
+    
    
    
     .InfoServiceLeft{
@@ -11,6 +11,7 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        height: auto;
        
     }
     .ImgService{
@@ -32,10 +33,6 @@
         opacity: 0;
         transform: translateY(-50px);
         transition: opacity 0.8s, transform 1.5s;
-        width: 100%;
-        height: auto;
-   
-        
     }
 
     .ImgService:hover{
@@ -57,12 +54,13 @@
 .TipoServiceRight{
     box-shadow: 0 0px 50px 10px rgba(0, 0, 0, 0.548);
     background-color: #222222;
-
+    
     .InfoServiceRight{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: auto;
        
     }
     .ImgService{
@@ -82,8 +80,7 @@
         opacity: 0;
         transform: translateY(-50px);
         transition: opacity 0.8s, transform 1.5s;
-        width: 100%;
-        height: auto;
+       
    
     }
     .TextInfoServiceBlack{
@@ -97,17 +94,12 @@
         opacity: 0;
         transform: translateY(-50px);
         transition: opacity 0.8s, transform 1.5s;
-        width: 100%;
-        height: auto;
-   
     }
 
     .ImgService:hover{
         transform: scale(1.05);
     }
-
-   
-    
+ 
     .TextInfoService.appear{
         opacity: 1;
         transform: translateY(0);
