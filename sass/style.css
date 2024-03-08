@@ -828,7 +828,7 @@ span {
 }
 @media only screen and (min-width: 1025px) and (max-width: 1400px) {
   .ContainerElegirnos {
-    min-height: 60vh;
+    min-height: 80vh;
   }
   .ContainerElegirnos .ElegirnosText #TextElegirnos {
     font-size: 2rem;
@@ -840,9 +840,6 @@ span {
 @media only screen and (min-width: 1400px) {
   .ContainerElegirnos {
     min-height: 90vh;
-  }
-  .ContainerElegirnos .ElegirnosText {
-    height: 70vh;
   }
   .ContainerElegirnos .ElegirnosText #TextElegirnos {
     font-size: 3rem;
@@ -862,28 +859,43 @@ span {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateY(-70px);
+  transform: translateY(-50px);
   transition: opacity 0.8s, transform 1.5s;
 }
 .TipoServiceLeft .ImgService {
-  width: 300px;
-  height: 300px;
-  margin: 2rem;
+  width: 250px;
+  height: 250px;
+  margin: 1rem;
   transition: 1s;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.8s, transform 1.5s;
 }
 .TipoServiceLeft .TextInfoService {
   text-align: center;
-  margin: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1.5px;
-  font-weight: 200;
+  font-weight: 300;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.8s, transform 1.5s;
 }
 .TipoServiceLeft .ImgService:hover {
   transform: scale(1.05);
 }
 .TipoServiceLeft .InfoServiceLeft.appear {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
+}
+.TipoServiceLeft .TextInfoService.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+.TipoServiceLeft .ImgService.appear {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .TipoServiceRight {
@@ -896,22 +908,26 @@ span {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateY(-70px);
+  transform: translateY(-50px);
   transition: opacity 0.8s, transform 1.5s;
 }
 .TipoServiceRight .ImgService {
-  width: 300px;
-  height: 300px;
-  margin: 2rem;
+  width: 250px;
+  height: 250px;
+  margin: 1rem;
   transition: 1s;
 }
 .TipoServiceRight .TextInfoService {
   text-align: center;
-  margin: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   font-family: "Montserrat", sans-serif;
   color: white;
   letter-spacing: 1.5px;
-  font-weight: 200;
+  font-weight: 300;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.8s, transform 1.5s;
 }
 .TipoServiceRight .TextInfoServiceBlack {
   text-align: center;
@@ -919,14 +935,26 @@ span {
   font-family: "Montserrat", sans-serif;
   color: white;
   letter-spacing: 1.5px;
-  font-weight: 200;
+  font-weight: 300;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.8s, transform 1.5s;
 }
 .TipoServiceRight .ImgService:hover {
   transform: scale(1.05);
 }
 .TipoServiceRight .InfoServiceRight.appear {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
+}
+.TipoServiceRight .TextInfoService.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+.TipoServiceRight .ImgService.appear {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
