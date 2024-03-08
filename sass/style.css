@@ -855,6 +855,7 @@ span {
   display: flex;
   flex-direction: column;
   width: auto;
+  height: auto;
 }
 .TipoServiceLeft .InfoServiceLeft {
   display: flex;
@@ -899,6 +900,7 @@ span {
   box-shadow: 0 0px 50px 10px rgba(0, 0, 0, 0.548);
   background-color: #222222;
   width: auto;
+  height: auto;
 }
 .TipoServiceRight .InfoServiceRight {
   display: flex;
@@ -963,6 +965,10 @@ span {
     align-items: center;
     width: 50%;
   }
+  .TipoServiceLeft .InfoServiceLeft .ImageDiv .ImgService {
+    width: 300px;
+    height: 300px;
+  }
   .TipoServiceLeft .InfoServiceLeft .TextInfoService {
     text-align: start;
     width: 50%;
@@ -976,6 +982,10 @@ span {
     justify-content: center;
     align-items: center;
     width: 50%;
+  }
+  .TipoServiceRight .InfoServiceRight .ImageDiv .ImgService {
+    width: 300px;
+    height: 300px;
   }
   .TipoServiceRight .InfoServiceRight .TextInfoService {
     text-align: end;
