@@ -855,7 +855,6 @@ span {
   display: flex;
   flex-direction: column;
   width: auto;
-  min-height: 100vh;
 }
 .TipoServiceLeft .InfoServiceLeft {
   display: flex;
@@ -900,7 +899,6 @@ span {
   box-shadow: 0 0px 50px 10px rgba(0, 0, 0, 0.548);
   background-color: #222222;
   width: auto;
-  min-height: 100vh;
 }
 .TipoServiceRight .InfoServiceRight {
   display: flex;
