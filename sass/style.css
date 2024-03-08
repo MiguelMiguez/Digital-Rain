@@ -76,7 +76,7 @@ body {
 .ContainerAbout .CloudContainer {
   display: flex;
   justify-content: space-evenly;
-  background-image: url(/img/nube.png);
+  background-image: url(../img/nube.png);
   width: 300px;
   height: 235px;
   background-size: cover;
