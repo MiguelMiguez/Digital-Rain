@@ -4,9 +4,6 @@
     flex-direction: column;
     width: auto;
     min-height: 100vh;
-    
-    
-   
    
     .InfoServiceLeft{
         display: flex;
@@ -41,8 +38,6 @@
         transform: scale(1.05);
     }
 
-    
-
     .TextInfoService.appear{
         opacity: 1;
         transform: translateY(0);
@@ -72,6 +67,9 @@
         height: 250px;
         margin: 1rem;
         transition: 1s;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.8s, transform 1.5s;
     }
     .TextInfoService{
         text-align: center;
@@ -84,9 +82,8 @@
         opacity: 0;
         transform: translateY(-50px);
         transition: opacity 0.8s, transform 1.5s;
-       
-   
     }
+
     .TextInfoServiceBlack{
         text-align: center;
         margin: 2rem;
