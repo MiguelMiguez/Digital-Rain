@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/Recurso 7favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./sass/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,23 +12,23 @@
 </head>
 <body>
     <section class="ContainerAll">
-        <div class="ContainerVistaPrincipal">
+        <div id="home" class="ContainerVistaPrincipal">
             <nav class="MenuHamburguesa">
                 <img src="./img/cruzado.png" alt="" class="cruz">
                 <ul>
-                    <li><a class="inpage"  href="">INICIO</a></li>
-                    <li><a class="inpage"  href="">SERVICIOS</a></li>
-                    <li><a class="inpage"  href="">NOSOTROS</a></li>
-                    <li><a class="inpage"  href="">CONTACTO</a></li>
+                    <li><a href="">INICIO</a></li>
+                    <li><a href="">SERVICIOS</a></li>
+                    <li><a href="">NOSOTROS</a></li>
+                    <li><a href="">CONTACTO</a></li>
                 </ul>
             </nav>
-            <div class="ContainerNavbar">
+            <div class="ContainerNavbar" id="changeColor">
                 <nav class="MenuDesktop">
                     <ul>
-                        <li><a class="inpage"  href="">INICIO</a ></li>
-                        <li><a class="inpage"  href="">SERVICIOS</a></li>
-                        <li><a class="inpage"  href="">NOSOTROS</a></li>
-                        <li><a class="inpage"  href="">CONTACTO</a></li>
+                        <li><a href="#home">INICIO</a ></li>
+                        <li><a href="#servicios">SERVICIOS</a></li>
+                        <li><a href="#elegirnos">NOSOTROS</a></li>
+                        <li><a href="#contacto">CONTACTO</a></li>
                     </ul>
                 </nav>
                 <div class="MenuMobile">
@@ -37,7 +38,7 @@
                 </div>
             </div>
             <div class="ContainerAbout">
-                <div class="CloudContainer"></div>
+                <img src="./img/nube-p.png" alt="" class="CloudContainer">
                 <div class="blowscontainer">
                     <div class="blow" style="--index: 1; color: #474E68;">digital</div>
                     <div class="blow" style="--index: 2; color: #50577A;">rain</div>
@@ -48,12 +49,12 @@
                 </div>
                 <h1 class="name">DIGITAL RAIN</h1>
                 <h2 class="description">Tu <span>solución</span> en <span>desarrollo</span> web</h2>
-                <div class="ScrollButton">
-                    <div class="ArrowDown"></div>
+                <div id="scrollToServices" class="ScrollButton">
+                    <div class="ArrowDown"></a></div>
                 </div>
             </div>
         </div>
-        <div class="ContainerAllServices">
+        <div id="servicios" class="ContainerAllServices">
             <div class="TittleLeftWhite">
                 <h2 class="Tittles">servicios</h2>
                 <div class="TittleLine"></div>
@@ -61,6 +62,7 @@
             <div class="ContainerServices">
                 <div class="ContainerCardServices">
                     <h2 class="TittleCard">desarrollo web para <span>emprendedores</span></h2>
+                    
                     <div class="ListContainer">
                         <li class="TextCard">
                             Crea una presencia online impactante
@@ -75,35 +77,37 @@
                 </div>
                 <div class="ContainerCardServices">
                     <h2 class="TittleCard">desarrollo web para <span>empresas</span></h2>
+                    
                     <div class="ListContainer">
                         <li class="TextCard">
-                            Impulsa tu empresa con un sitio web completo y profesional.
+                            Impulsa tu empresa con un sitio web completo y profesional
                         </li>
                         <li class="TextCard">
                             Creación de páginas, diseño responsive y menú intuitivo
                         </li>
                         <li class="TextCard">
-                            Destaca tus servicios y convierte visitantes en clientes.
+                            Destaca tus servicios y convierte visitantes en clientes
                         </li>
                     </div> 
                 </div>
                 <div class="ContainerCardServices">
                     <h2 class="TittleCard">desarrollo web <span>personalizado</span></h2>
+                    
                     <div class="ListContainer">
                         <li class="TextCard">
                             Creamos sitios únicos que reflejan tu marca 
                         </li>
                         <li class="TextCard">
-                            Detalles adaptados exclusivamente para ti. 
+                            Detalles adaptados exclusivamente para ti 
                         </li>
                         <li class="TextCard">
-                            Impulsa tu impacto en la web con un diseño cautivador y diferenciado.
+                            Impulsa tu impacto en la web con un diseño cautivador y diferenciado
                         </li>
                     </div> 
                 </div>    
             </div>
         </div>
-        <div class="ContainerElegirnos">
+        <div id="elegirnos" class="ContainerElegirnos">
             <div class="TittleRightWhite">
                 <h2 class="Tittles">¿porque elegirnos?</h2>
                 <div class="TittleLine"></div>
@@ -173,7 +177,7 @@
                 </div>
             </div>
         </div>
-        <div class="ContainerForm">
+        <div id="contacto" class="ContainerForm">
             <div class="TittleLeft">
                 <h2 class="Tittles">contacto</h2>
                 <div class="TittleLine"></div>
@@ -181,7 +185,7 @@
             <div class="ContainerInfoForm">
                 <div class="ContainerTextForm">
                     <p class="TextForm">
-                        Únete a la familia de <span>CetroCode</span> y juntos hagamos crecer tu empresa en el <span>mundo digital</span>.
+                        Únete a la familia de <span>DigitalRain</span> y juntos hagamos crecer tu empresa en el <span>mundo digital</span>.
                     </p>
                 </div>
                 <form action="#" method="post">
@@ -202,13 +206,18 @@
         </div>
         <div class="FooterContainer">
             <div class="nameLogo">
-                <img class="logoFooter" src="./img/nube-blanca.png" alt="">
                 <span class="nameFooter">Digital Rain</span>
             </div>
-            <div><span class="reserved">© 2024 Digital Rain, todos los derechos reservados.</span></div>
+            <div class="reservedContainer"><span class="reserved">© 2024 Digital Rain, todos los derechos reservados.</span></div>
+            <div class="socialContainer">            
+                <img src="" alt="" class="social">
+                <img src="" alt="" class="social">
+                <img src="" alt="" class="social">
+            </div>
+
         </div>
     </section>
-    <script src="./js/main.js"></script>
+    <script src="/js/main.js"></script>
     
 </body>
 </html>

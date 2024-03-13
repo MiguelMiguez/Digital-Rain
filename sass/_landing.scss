@@ -7,31 +7,33 @@
     box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
 }
 
-.ContainerAbout{
+.ContainerAbout {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    justify-content: space-evenly;
-    height: 90vh;
-    .CloudContainer{
-        display: flex;
-        justify-content: space-evenly;
-        background-image: url(../img/nube.png);
+
+    .CloudContainer {
+        margin-top: 50px;
+        background-image: url(../img/nube-p.png);
         width: 300px;
-        height: 235px;
+        height: auto;
+        max-width: 400px;
+        opacity: 0.3;
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.753));
         background-size: cover;
-        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.753));
-        opacity: 0.5;
     }
-    .blowscontainer{
+
+    .blowscontainer {
         display: flex;
         justify-content: space-around;
         width: 300px;
-        .blow{
-            margin-top: -50px;
+        max-width: 350px;
+        margin-bottom: 20px;
+
+        .blow {
             writing-mode: vertical-rl;
-            font-size: 20px;
+            font-size: 1.3rem;
             animation: fall 2s ease-in-out infinite;
             animation-delay: calc(0.4s * var(--index));
             opacity: 0;
@@ -39,24 +41,28 @@
             font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             font-weight: 400;
-            z-index: 9998;
-            cursor:default;
+            cursor: default;
         }
     }
-    .name{
+
+    .name {
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        font-size: 3.5rem;
+        font-size: 3.4rem;
         margin-top: 100px;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-        
+
+
     }
-    .description{
+
+    .description {
         font-family: 'Montserrat', sans-serif;
         font-size: 1.5rem;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+        margin-top: 5vh;
     }
-    .ScrollButton{
+
+    .ScrollButton {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -68,8 +74,9 @@
         box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
         background-color: rgba(0, 0, 0, 0.1);
         transition: 0.4s;
-        
-        .ArrowDown{
+        margin-top: 20px;
+
+        .ArrowDown {
             width: 32px;
             height: 32px;
             animation: moveDown 2s ease infinite;
@@ -81,7 +88,8 @@
 
         }
     }
-    .ScrollButton:hover{
+
+    .ScrollButton:hover {
         width: 42px;
         height: 42px;
         animation: moveDown 2s ease infinite;
@@ -89,17 +97,17 @@
         background-color: rgb(255, 255, 255);
         background-position: center;
         background-repeat: no-repeat;
-        
+
     }
 
-    span{
+    span {
         color: #007DFD;
     }
 }
 
-/* Menu Hamburguesa */
 
-.MenuHamburguesa{
+
+.MenuHamburguesa {
     position: fixed;
     top: 0;
     right: -1024px;
@@ -110,7 +118,8 @@
     border-top-left-radius: 10px;
     transition: right 0.5s ease;
     box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.5);
-    .cruz{
+
+    .cruz {
         height: 50px;
         width: 50px;
         margin-right: 1rem;
@@ -120,14 +129,18 @@
         transition: 0.2s;
         border-radius: 10px;
     }
-    .cruz:hover{
+
+    .cruz:hover {
         background-color: rgba(255, 255, 255, 0.05);
     }
-    ul{
+
+    ul {
         list-style-type: none;
-        li{
+
+        li {
             margin: 2rem 2rem 0rem 2rem;
-            a{
+
+            a {
                 text-decoration: none;
                 color: white;
                 font-family: 'Montserrat', sans-serif;
@@ -135,34 +148,38 @@
                 transition: color 0.3s ease;
                 text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
             }
-            a:hover{
+
+            a:hover {
                 color: rgba(255, 255, 255, 0.3);
             }
         }
     }
 }
 
-.show{
+.show {
     right: 0;
 }
-.moveLeft{
+
+.moveLeft {
     transform: translateX(-300px);
 }
 
-/* navbar */
 
 
-.ContainerNavbar{
+
+.ContainerNavbar {
     display: flex;
     justify-content: end;
     align-items: center;
     width: 100%;
     height: 80px;
     background-color: transparent;
-    .MenuDesktop{
+
+    .MenuDesktop {
         display: none;
     }
-    .MenuMobile{
+
+    .MenuMobile {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -175,26 +192,28 @@
         transition: transform 0.5s ease, background-color 0.2s ease;
         border-radius: 10px;
         cursor: pointer;
-        .line{
+
+        .line {
             height: 2px;
             width: 60%;
             background-color: white;
             border-radius: 10px;
         }
     }
-    .MenuMobile:hover{
+
+    .MenuMobile:hover {
         background-color: rgba(255, 255, 255, 0.05);
     }
 }
 
-/* keyframes */
+
 
 @keyframes moveDown {
     0% {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(5px); /* Cambia la distancia del movimiento hacia abajo según lo desees */
+      transform: translateY(5px); 
     }
     100% {
       transform: translateY(0);
@@ -214,129 +233,206 @@
     }
   }
 
-  /* BreakPoints */
+
 
   @media screen and (min-width: 1024px) and (max-width: 1400px) {
-    .ContainerNavbar{
+    .ContainerAbout {
+        .CloudContainer {
+            margin-top: 130px;
+        }
+
+        .blowscontainer {
+            .blow {
+                font-size: 2vw;
+            }
+        }
+
+    }
+
+    .ContainerNavbar {
         justify-content: center;
-        /* box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
-        background-color: rgba(0, 0, 0, 0.418); */
         position: fixed;
         z-index: 1000;
-        .MenuDesktop{
+
+        .MenuDesktop {
             display: block;
             width: 100%;
-            ul{
+
+            ul {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 list-style-type: none;
-                li{
-                    .inpage {
+
+                li {
+                    a{
                         text-decoration: none;
                         color: black;
                         font-family: 'Montserrat', sans-serif;
                         font-size: 1.2rem;
                         padding-bottom: 5px;
-                        text-shadow: 0 2px 5px rgb(116, 116, 116);
-                        border-bottom: 1px solid transparent; 
+                        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                        border-bottom: 1px solid transparent;
                         transition: border-bottom 0.5s ease;
                         text-transform: lowercase;
                     }
-                    
-                    .inpage:hover {
-                        border-bottom: 1px solid #007DFD;
+                    a:hover{
                         color: #007DFD;
-                        
+                        text-shadow: 0 2px 5px rgba(0, 0, 255, 0.5);
+                        transition: 300ms;
                     }
                 }
-                
             }
+
         }
-        .MenuMobile{
+
+        .MenuMobile {
             display: none;
         }
 
-       
-        
-    }
 
-    .ContainerAbout{
-
-        .blowscontainer{
-            padding-top: 2.5rem;
-        }
-
-        .name{
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-            font-size: 3rem;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-            padding-bottom: 0.5rem;
-        }
-        .description{
-            font-size: 1.5rem;
-            padding: 1rem 0rem 1rem 0rem;
-        }
 
     }
-    
-  }
+
+    .notscrolled{
+        background-color: transparent;
+        transition: 0.3s;
+        .MenuDesktop{
+            ul{
+                li{
+                    a{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .scrolled{
+        background-color: rgb(30,30,30);
+        transition: 0.3s;
+        .MenuDesktop{
+            ul{
+                li{
+                    a{
+                        color: white;
+                        text-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
 
   @media only screen and (min-width: 1400px){
+    .ContainerAbout {
 
-    .ContainerNavbar{
+        .name{
+            font-size: 4rem;
+        }
+
+        .CloudContainer {
+            margin-top: 130px;
+            width: 400px;
+        }
+
+        .blowscontainer {
+            .blow {
+                width: 400px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .ContainerNavbar {
         justify-content: center;
-        /* box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
-        background-color: rgba(0, 0, 0, 0.418); */
         position: fixed;
         z-index: 1000;
-        .MenuDesktop{
+        .MenuDesktop {
             display: block;
             width: 100%;
-            ul{
+        
+            ul {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 list-style-type: none;
-                li{
-                    .inpage {
+        
+                li {
+                    position: relative; 
+        
+                    a {
                         text-decoration: none;
                         color: black;
                         font-family: 'Montserrat', sans-serif;
                         font-size: 1.2rem;
                         padding-bottom: 5px;
-                        text-shadow: 0 2px 5px rgb(116, 116, 116);
-                        border-bottom: 1px solid transparent; 
-                        transition: border-bottom 0.5s ease;
+                        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                        transition: color 0.3s ease, text-shadow 0.3s ease; 
                         text-transform: lowercase;
-                    }
-                    
-                    .inpage:hover{
-                        border-bottom: 1px solid #000000;
+        
+                        &::after { 
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            bottom: -7px;
+                            left: 0;
+                            background-color: transparent;
+                            transform: scaleX(0);
+                            transition: all 0.3s ease-in-out;
+                        }
+        
+                        &:hover {
+                            color: #007DFD;
+                            text-shadow: 0 2px 5px rgba(0, 0, 255, 0.5);
+        
+                            &::after { 
+                                background-color: #007DFD;
+                                transform: scaleX(1);
+                            }
+                        }
                     }
                 }
-                
             }
         }
-        .MenuMobile{
+        
+
+        .MenuMobile {
             display: none;
         }
 
-       
-        
+
+
     }
 
-    .ContainerAbout{
-
-
-        .name{
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-            font-size: 5rem;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-            padding-bottom: 0.5rem;
+    .scrolled{
+        background-color: rgb(30,30,30);
+        transition: 0.3s;
+        .MenuDesktop{
+            ul{
+                li{
+                    a{
+                        color: white;
+                        text-shadow: none;
+                    }
+                }
+            }
         }
-
     }
-  }
+
+    .notscrolled{
+        background-color: transparent;
+        transition: 0.3s;
+        .MenuDesktop{
+            ul{
+                li{
+                    a{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -70,28 +69,27 @@ body {
   flex-direction: column;
   align-items: center;
   color: white;
-  justify-content: space-evenly;
-  height: 90vh;
 }
 .ContainerAbout .CloudContainer {
-  display: flex;
-  justify-content: space-evenly;
-  background-image: url(../img/nube.png);
+  margin-top: 50px;
+  background-image: url(../img/nube-p.png);
   width: 300px;
-  height: 235px;
+  height: auto;
+  max-width: 400px;
+  opacity: 0.3;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.753));
   background-size: cover;
-  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.753));
-  opacity: 0.5;
 }
 .ContainerAbout .blowscontainer {
   display: flex;
   justify-content: space-around;
   width: 300px;
+  max-width: 350px;
+  margin-bottom: 20px;
 }
 .ContainerAbout .blowscontainer .blow {
-  margin-top: -50px;
   writing-mode: vertical-rl;
-  font-size: 20px;
+  font-size: 1.3rem;
   animation: fall 2s ease-in-out infinite;
   animation-delay: calc(0.4s * var(--index));
   opacity: 0;
@@ -99,13 +97,12 @@ body {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
-  z-index: 9998;
   cursor: default;
 }
 .ContainerAbout .name {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  font-size: 3.5rem;
+  font-size: 3.4rem;
   margin-top: 100px;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
@@ -113,6 +110,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  margin-top: 5vh;
 }
 .ContainerAbout .ScrollButton {
   display: flex;
@@ -126,6 +124,7 @@ body {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.1);
   transition: 0.4s;
+  margin-top: 20px;
 }
 .ContainerAbout .ScrollButton .ArrowDown {
   width: 32px;
@@ -150,7 +149,6 @@ body {
   color: #007DFD;
 }
 
-/* Menu Hamburguesa */
 .MenuHamburguesa {
   position: fixed;
   top: 0;
@@ -202,7 +200,6 @@ body {
   transform: translateX(-300px);
 }
 
-/* navbar */
 .ContainerNavbar {
   display: flex;
   justify-content: end;
@@ -238,13 +235,12 @@ body {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* keyframes */
 @keyframes moveDown {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(5px); /* Cambia la distancia del movimiento hacia abajo según lo desees */
+    transform: translateY(5px);
   }
   100% {
     transform: translateY(0);
@@ -262,12 +258,15 @@ body {
     transform: translateY(100px);
   }
 }
-/* BreakPoints */
 @media screen and (min-width: 1024px) and (max-width: 1400px) {
+  .ContainerAbout .CloudContainer {
+    margin-top: 130px;
+  }
+  .ContainerAbout .blowscontainer .blow {
+    font-size: 2vw;
+  }
   .ContainerNavbar {
     justify-content: center;
-    /* box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
-    background-color: rgba(0, 0, 0, 0.418); */
     position: fixed;
     z-index: 1000;
   }
@@ -281,44 +280,55 @@ body {
     align-items: center;
     list-style-type: none;
   }
-  .ContainerNavbar .MenuDesktop ul li .inpage {
+  .ContainerNavbar .MenuDesktop ul li a {
     text-decoration: none;
     color: black;
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     padding-bottom: 5px;
-    text-shadow: 0 2px 5px rgb(116, 116, 116);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s ease;
     text-transform: lowercase;
   }
-  .ContainerNavbar .MenuDesktop ul li .inpage:hover {
-    border-bottom: 1px solid #007DFD;
+  .ContainerNavbar .MenuDesktop ul li a:hover {
     color: #007DFD;
+    text-shadow: 0 2px 5px rgba(0, 0, 255, 0.5);
+    transition: 300ms;
   }
   .ContainerNavbar .MenuMobile {
     display: none;
   }
-  .ContainerAbout .blowscontainer {
-    padding-top: 2.5rem;
+  .notscrolled {
+    background-color: transparent;
+    transition: 0.3s;
   }
-  .ContainerAbout .name {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-size: 3rem;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-    padding-bottom: 0.5rem;
+  .notscrolled .MenuDesktop ul li a {
+    color: black;
   }
-  .ContainerAbout .description {
-    font-size: 1.5rem;
-    padding: 1rem 0rem 1rem 0rem;
+  .scrolled {
+    background-color: rgb(30, 30, 30);
+    transition: 0.3s;
+  }
+  .scrolled .MenuDesktop ul li a {
+    color: white;
+    text-shadow: none;
   }
 }
 @media only screen and (min-width: 1400px) {
+  .ContainerAbout .name {
+    font-size: 4rem;
+  }
+  .ContainerAbout .CloudContainer {
+    margin-top: 130px;
+    width: 400px;
+  }
+  .ContainerAbout .blowscontainer .blow {
+    width: 400px;
+    font-size: 1.5rem;
+  }
   .ContainerNavbar {
     justify-content: center;
-    /* box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
-    background-color: rgba(0, 0, 0, 0.418); */
     position: fixed;
     z-index: 1000;
   }
@@ -332,29 +342,55 @@ body {
     align-items: center;
     list-style-type: none;
   }
-  .ContainerNavbar .MenuDesktop ul li .inpage {
+  .ContainerNavbar .MenuDesktop ul li {
+    position: relative;
+  }
+  .ContainerNavbar .MenuDesktop ul li a {
     text-decoration: none;
     color: black;
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     padding-bottom: 5px;
-    text-shadow: 0 2px 5px rgb(116, 116, 116);
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.5s ease;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
     text-transform: lowercase;
   }
-  .ContainerNavbar .MenuDesktop ul li .inpage:hover {
-    border-bottom: 1px solid #000000;
+  .ContainerNavbar .MenuDesktop ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -7px;
+    left: 0;
+    background-color: transparent;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  .ContainerNavbar .MenuDesktop ul li a:hover {
+    color: #007DFD;
+    text-shadow: 0 2px 5px rgba(0, 0, 255, 0.5);
+  }
+  .ContainerNavbar .MenuDesktop ul li a:hover::after {
+    background-color: #007DFD;
+    transform: scaleX(1);
   }
   .ContainerNavbar .MenuMobile {
     display: none;
   }
-  .ContainerAbout .name {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-size: 5rem;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-    padding-bottom: 0.5rem;
+  .scrolled {
+    background-color: rgb(30, 30, 30);
+    transition: 0.3s;
+  }
+  .scrolled .MenuDesktop ul li a {
+    color: white;
+    text-shadow: none;
+  }
+  .notscrolled {
+    background-color: transparent;
+    transition: 0.3s;
+  }
+  .notscrolled .MenuDesktop ul li a {
+    color: black;
   }
 }
 .TittleLeft {
@@ -1123,16 +1159,6 @@ form {
   align-items: center;
   gap: 1rem;
   margin: 0.5rem;
-  /* button{
-      padding: 0.5rem 2rem 0.5rem 2rem;
-      background-color: #007DFD;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      border: 1px solid #505050b0;
-      box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
-      margin: 2rem;
-  } */
 }
 .FormGroup label {
   width: 60px;

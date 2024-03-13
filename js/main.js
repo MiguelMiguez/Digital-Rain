@@ -37,3 +37,49 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 });
+
+
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('changeColor');
+    if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+        navbar.classList.remove('notscrolled')
+    } else {
+        navbar.classList.remove('scrolled');
+        navbar.classList.add('notscrolled')
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    
+    var links = document.querySelectorAll(".MenuDesktop a");
+
+   
+    links.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            var targetId = this.getAttribute("href").substring(1);
+
+            var targetElement = document.getElementById(targetId);
+
+            targetElement.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+
+    
+    var scrollButton = document.getElementById("scrollToServices");
+
+    
+    scrollButton.addEventListener("click", function() {
+    
+        var targetElement = document.getElementById("servicios");
+
+        targetElement.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
