@@ -378,7 +378,9 @@ body {
     display: none;
   }
   .scrolled {
-    background-color: rgb(30, 30, 30);
+    background-color: rgba(17, 17, 17, 0.712);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     transition: 0.3s;
   }
   .scrolled .MenuDesktop ul li a {

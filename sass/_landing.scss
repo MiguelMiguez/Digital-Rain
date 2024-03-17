@@ -407,13 +407,15 @@
 
     }
 
-    .scrolled{
-        background-color: rgb(30,30,30);
+    .scrolled {
+        background-color: rgba(17, 17, 17, 0.712); // Color oscuro con opacidad
+        backdrop-filter: blur(10px); // Aplicar desenfoque al fondo
         transition: 0.3s;
-        .MenuDesktop{
-            ul{
-                li{
-                    a{
+    
+        .MenuDesktop {
+            ul {
+                li {
+                    a {
                         color: white;
                         text-shadow: none;
                     }
@@ -421,6 +423,7 @@
             }
         }
     }
+    
 
     .notscrolled{
         background-color: transparent;
