@@ -257,33 +257,50 @@
         .MenuDesktop {
             display: block;
             width: 100%;
-
+        
             ul {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 list-style-type: none;
-
+        
                 li {
-                    a{
+                    position: relative; 
+        
+                    a {
                         text-decoration: none;
                         color: black;
                         font-family: 'Montserrat', sans-serif;
                         font-size: 1.2rem;
                         padding-bottom: 5px;
                         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-                        border-bottom: 1px solid transparent;
-                        transition: border-bottom 0.5s ease;
+                        transition: color 0.3s ease, text-shadow 0.3s ease; 
                         text-transform: lowercase;
-                    }
-                    a:hover{
-                        color: #007DFD;
-                        text-shadow: 0 2px 5px rgba(0, 0, 255, 0.5);
-                        transition: 300ms;
+        
+                        &::after { 
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            bottom: -7px;
+                            left: 0;
+                            background-color: transparent;
+                            transform: scaleX(0);
+                            transition: all 0.3s ease-in-out;
+                        }
+        
+                        &:hover {
+                            color: #007DFD;
+                            text-shadow: 0 2px 5px rgba(0, 0, 255, 0.5);
+        
+                            &::after { 
+                                background-color: #007DFD;
+                                transform: scaleX(1);
+                            }
+                        }
                     }
                 }
             }
-
         }
 
         .MenuMobile {
@@ -309,7 +326,8 @@
     }
 
     .scrolled{
-        background-color: rgb(30,30,30);
+        background-color: rgba(17, 17, 17, 0.712); 
+        backdrop-filter: blur(10px);
         transition: 0.3s;
         .MenuDesktop{
             ul{
@@ -408,8 +426,8 @@
     }
 
     .scrolled {
-        background-color: rgba(17, 17, 17, 0.712); // Color oscuro con opacidad
-        backdrop-filter: blur(10px); // Aplicar desenfoque al fondo
+        background-color: rgba(17, 17, 17, 0.712); 
+        backdrop-filter: blur(10px);
         transition: 0.3s;
     
         .MenuDesktop {

@@ -280,6 +280,9 @@ body {
     align-items: center;
     list-style-type: none;
   }
+  .ContainerNavbar .MenuDesktop ul li {
+    position: relative;
+  }
   .ContainerNavbar .MenuDesktop ul li a {
     text-decoration: none;
     color: black;
@@ -287,14 +290,27 @@ body {
     font-size: 1.2rem;
     padding-bottom: 5px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.5s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
     text-transform: lowercase;
+  }
+  .ContainerNavbar .MenuDesktop ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -7px;
+    left: 0;
+    background-color: transparent;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
   }
   .ContainerNavbar .MenuDesktop ul li a:hover {
     color: #007DFD;
     text-shadow: 0 2px 5px rgba(0, 0, 255, 0.5);
-    transition: 300ms;
+  }
+  .ContainerNavbar .MenuDesktop ul li a:hover::after {
+    background-color: #007DFD;
+    transform: scaleX(1);
   }
   .ContainerNavbar .MenuMobile {
     display: none;
@@ -307,7 +323,9 @@ body {
     color: black;
   }
   .scrolled {
-    background-color: rgb(30, 30, 30);
+    background-color: rgba(17, 17, 17, 0.712);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     transition: 0.3s;
   }
   .scrolled .MenuDesktop ul li a {
@@ -1272,31 +1290,104 @@ form {
   }
 }
 .FooterContainer {
-  height: 200px;
-  width: 100%;
-  background-color: rgb(50, 50, 50);
+  background-image: url(../img/fondo.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0px 40px 1px rgba(0, 0, 0, 0.548);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
 }
-.FooterContainer .nameLogo {
+.FooterContainer .branding {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
 }
-.FooterContainer .nameLogo .logoFooter {
-  width: 100px;
-  height: 100px;
+.FooterContainer .branding .brand {
+  padding: 2rem 0rem 2rem 0rem;
+  width: 150px;
+  height: auto;
 }
-.FooterContainer .nameLogo .nameFooter {
-  font-family: "Montserrat", sans-serif;
+.FooterContainer .ContactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.FooterContainer .ContactInfo .ContainerContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.FooterContainer .ContactInfo .ContainerContact .social {
+  width: 25px;
+  height: 25px;
+}
+.FooterContainer .ContactInfo .Contact {
+  text-shadow: 0 0px 4px rgba(150, 150, 150, 0.678);
+}
+.FooterContainer .ContactInfo .SocialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   color: white;
-  font-size: 30px;
+  padding: 0.5rem;
+  border-radius: 40px;
+  transition: 1s;
 }
-.FooterContainer .reserved {
-  font-family: "Montserrat", sans-serif;
+.FooterContainer .ContactInfo .SocialMedia a {
   color: white;
-  font-size: 16px;
+  text-decoration: none;
+  text-shadow: 0 0px 4px rgba(0, 0, 0, 0.842);
+  transition: 0.5s;
+}
+.FooterContainer .ContactInfo .SocialMedia:hover {
+  background-color: black;
+}
+.FooterContainer .FooterNav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0rem 2rem 0rem;
+}
+.FooterContainer .FooterNav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  text-shadow: 0 0px 4px rgba(0, 0, 0, 0.842);
+}
+.FooterContainer .FooterNav ul li a:hover {
+  color: black;
+}
+.FooterContainer .Copyright {
+  padding: 0rem 0rem 2rem 0rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0px 4px rgba(255, 255, 255, 0.507);
+}
+
+@media only screen and (min-width: 1000px) {
+  .FooterContainer .ContactInfo {
+    padding-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+  }
+  .FooterContainer .ContactInfo .ContainerInfoContact .ContainerContact {
+    justify-content: start;
+  }
+  .FooterContainer .Copyright {
+    padding-top: 4rem;
+  }
 }/*# sourceMappingURL=style.css.map */
