@@ -9,10 +9,6 @@ document.querySelector('.cruz').addEventListener('click', function(){
 })
 
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
@@ -40,7 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('changeColor');
+    let navbar = document.getElementById('changeColor');
+    let whatsappButton = document.querySelector('.WhatsappButton');
+    let footer = document.querySelector('.FooterContainer');
+    let footerTopPosition = footer.getBoundingClientRect().top;
+
+    if (footerTopPosition > window.innerHeight) {
+        whatsappButton.style.bottom = '20px'; 
+    } else {
+        whatsappButton.style.bottom = (window.innerHeight - footerTopPosition + 20) + 'px'; 
+    }
     if (window.scrollY > 80) {
         navbar.classList.add('scrolled');
         navbar.classList.remove('notscrolled')
@@ -48,21 +53,22 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
         navbar.classList.add('notscrolled')
     }
+
 });
 
 
 document.addEventListener("DOMContentLoaded", function() {
     
-    var links = document.querySelectorAll(".MenuDesktop a");
+    let links = document.querySelectorAll(".MenuDesktop a");
 
    
     links.forEach(function(link) {
         link.addEventListener("click", function(event) {
             event.preventDefault();
 
-            var targetId = this.getAttribute("href").substring(1);
+            let targetId = this.getAttribute("href").substring(1);
 
-            var targetElement = document.getElementById(targetId);
+            let targetElement = document.getElementById(targetId);
 
             targetElement.scrollIntoView({
                 behavior: "smooth"
@@ -71,15 +77,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     
-    var scrollButton = document.getElementById("scrollToServices");
+    let scrollButton = document.getElementById("scrollToServices");
 
     
     scrollButton.addEventListener("click", function() {
     
-        var targetElement = document.getElementById("servicios");
+        let targetElement = document.getElementById("servicios");
 
         targetElement.scrollIntoView({
             behavior: "smooth"
         });
     });
 });
+
