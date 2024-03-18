@@ -90,3 +90,29 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+        var form = document.querySelector('form[action="./php/enviar_email.php"]');
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+
+            // Aquí puedes mostrar un mensaje de "Enviando..." si lo deseas
+
+            // Realiza la solicitud de formulario mediante AJAX para que no se recargue la página
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", form.action);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Aquí puedes ocultar el mensaje de "Enviando..."
+                        document.getElementById('mensaje-enviado').style.display = 'block'; // Muestra el mensaje de confirmación
+                        form.reset(); // Limpia el formulario después de enviarlo
+                    } else {
+                        console.error('Hubo un error al enviar el formulario.'); // Manejo de errores
+                    }
+                }
+            };
+            xhr.send(formData);
+        });
+    });
