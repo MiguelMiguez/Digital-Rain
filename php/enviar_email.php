@@ -21,5 +21,5 @@ $headers = "From: $email";
 
 $mail_success = mail($to, $subject, $message, $headers);
 
-header('Location: ../index.html');
+header('Location:email.html');
 ?>
