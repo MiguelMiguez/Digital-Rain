@@ -1260,20 +1260,14 @@ form {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
   }
   .ContainerInfoForm .ContainerTextForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 50%;
   }
-  .ContainerInfoForm .ContainerTextForm .TextForm {
-    font-size: 2rem;
-    padding: 1rem;
-  }
-  .ContainerInfoForm form {
+  .ContainerInfoForm .ContainerFormGroup {
     width: 50%;
-    padding: 2rem 1rem 2rem 1rem;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -1290,12 +1284,12 @@ form {
     font-size: 2rem;
     padding: 2rem;
   }
-  .ContainerInfoForm form {
+  .ContainerInfoForm .ContainerFormGroup {
     width: 50%;
     padding: 2rem 1rem 2rem 1rem;
   }
-  .ContainerInfoForm form input {
-    width: 400px;
+  .ContainerInfoForm .ContainerFormGroup .FormGroup input {
+    width: 300px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1314,11 +1308,11 @@ form {
     font-size: 3rem;
     padding: 1rem 1rem 1rem 5rem;
   }
-  .ContainerInfoForm form {
+  .ContainerInfoForm .ContainerFormGroup {
     width: 50%;
     padding: 2rem 1rem 2rem 1rem;
   }
-  .ContainerInfoForm form input {
+  .ContainerInfoForm .ContainerFormGroup .FormGroup input {
     width: 400px;
     height: 30px;
   }

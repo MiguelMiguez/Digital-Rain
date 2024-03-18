@@ -186,30 +186,30 @@
                 <h2 class="Tittles">contacto</h2>
                 <div class="TittleLine"></div>
             </div>
-            <div class="ContainerInfoForm">
-                <div class="ContainerTextForm">
-                    <p class="TextForm">
-                        Únete a la familia de <span>DigitalRain</span> y juntos hagamos crecer tu empresa en el <span>mundo digital</span>.
-                    </p>
+            <form action="./php/enviar_email.php" method="POST">
+                <div class="ContainerInfoForm">
+                    <div class="ContainerTextForm">
+                        <p class="TextForm">
+                            Únete a la familia de <span>DigitalRain</span> y juntos hagamos crecer tu empresa en el <span>mundo digital</span>.
+                        </p>
+                    </div>
+                    <div class="ContainerFormGroup">
+                        <div class="FormGroup">
+                            <input type="text" id="name" name="name" required placeholder="nombre">
+                        </div>
+                        <div class="FormGroup">     
+                            <input type="email" id="email" name="email" required placeholder="email">
+                        </div>
+                        <div class="FormGroup">
+                            <input type="number" id="number" name="number" rows="4" required placeholder="telefono" oninput="validity.valid||(value='');></input>
+                        </div>
+ 
+                    </div>
                 </div>
-                <form action="./php/enviar_email.php" method="POST">
-                    <div class="FormGroup">
-                        <input type="text" id="name" name="name" required placeholder="nombre">
-                    </div>
-                    <div class="FormGroup">     
-                        <input type="email" id="email" name="email" required placeholder="email">
-                    </div>
-                    <div class="FormGroup">
-                        <input type="number" id="number" name="number" rows="4" required placeholder="telefono"></input>
-                    </div>
-                </form>
-            </div>
             <div class="FormGroup">
                 <button type="submit">Enviar</button>
             </div>
-            <div id="mensaje-enviado" style="display: none;">
-                <p>¡Gracias! Tu mensaje ha sido enviado correctamente.</p>
-            </div>
+            </form>
         </div>
         <div class="FooterContainer">
             <div class="ContactInfo">
