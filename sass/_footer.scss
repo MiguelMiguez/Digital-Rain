@@ -2,6 +2,7 @@
     background-image: url(../img/fondo.jpg);
     background-position: center ;
     background-size: cover;
+    background-attachment: fixed;
     box-shadow: 0 0px 40px 1px rgba(0, 0, 0, 0.548);
     display: flex;
     flex-direction: column;
@@ -87,7 +88,7 @@
         }
 
         li a:hover{
-            color: black;
+            color: #007DFD;;
         }
     }
     
@@ -100,9 +101,10 @@
 }
 
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) and (max-width: 1599px)  {
 
     .FooterContainer{
+        background-position: bottom;
 
         .ContactInfo{
             padding-top: 2rem;
@@ -110,6 +112,13 @@
             justify-content: space-between;
             align-items: center;
             gap: 6rem;
+
+            .branding{
+                .brand{
+                    width: 200px;
+                    height: auto;
+                }
+            }
 
             .ContainerInfoContact{
                .ContainerContact{
@@ -125,4 +134,37 @@
     }
 
 
+}
+
+@media only screen and (min-width: 1600px) {
+    .FooterContainer{
+        background-position: bottom;
+
+        .ContactInfo{
+            padding-top: 2rem;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 6rem;
+
+            .branding{
+                .brand{
+                    width: 250px;
+                    height: auto;
+                }
+            }
+
+            .ContainerInfoContact{
+                color: wheat;
+               .ContainerContact{
+                justify-content: start;
+               }
+            }
+        }
+
+        .Copyright{
+            padding-top: 4rem;
+        }
+
+    }
 }

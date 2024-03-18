@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center;
     box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
+    background-attachment: fixed;
 }
 
 .ContainerAbout {
@@ -16,9 +17,9 @@
     .CloudContainer {
         margin-top: 50px;
         background-image: url(../img/nube-p.png);
-        width: 300px;
+        width: 250px;
         height: auto;
-        max-width: 400px;
+        max-width: 350px;
         opacity: 0.3;
         filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.753));
         background-size: cover;
@@ -27,7 +28,7 @@
     .blowscontainer {
         display: flex;
         justify-content: space-around;
-        width: 300px;
+        width: 250px;
         max-width: 350px;
         margin-bottom: 20px;
 
@@ -48,11 +49,9 @@
     .name {
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        font-size: 3.4rem;
+        font-size: 3rem;
         margin-top: 100px;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-
-
     }
 
     .description {
@@ -235,7 +234,7 @@
 
 
 
-  @media screen and (min-width: 1024px) and (max-width: 1400px) {
+  @media screen and (min-width: 1024px) and (max-width: 1599px) {
     .ContainerAbout {
         .CloudContainer {
             margin-top: 130px;
@@ -243,7 +242,7 @@
 
         .blowscontainer {
             .blow {
-                font-size: 2vw;
+                font-size: 1.2rem;
             }
         }
 
@@ -343,7 +342,7 @@
 
 }
 
-  @media only screen and (min-width: 1400px){
+  @media only screen and (min-width: 1600px){
     .ContainerAbout {
 
         .name{
