@@ -62,7 +62,6 @@ body {
   background-size: cover;
   background-position: center;
   box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.548);
-  background-attachment: fixed;
 }
 
 .ContainerAbout {
@@ -1303,7 +1302,6 @@ form {
   background-image: url(../img/fondo.jpg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   box-shadow: 0 0px 40px 1px rgba(0, 0, 0, 0.548);
   display: flex;
   flex-direction: column;
