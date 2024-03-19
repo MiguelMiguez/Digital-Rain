@@ -30,10 +30,43 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function handleResize() {
+        handleScroll(); // Volver a verificar la visibilidad de los elementos al cambiar el tamaño de la ventana del navegador
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize); // Agregar un listener para el evento resize
+    handleScroll(); // Llamar a handleScroll() una vez que se carga la página para verificar la visibilidad inicial de los elementos
+});
+
+
+
+
+/* document.addEventListener("DOMContentLoaded", function () {
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScroll() {
+        const elements = document.querySelectorAll('.TittleLeftWhite, .TittleRightWhite, .TittleLeft, .TittleRight ,.InfoServiceLeft, .InfoServiceRight, .ContainerCardServices,.TextInfoService,.ImgService');
+
+        elements.forEach(element => {
+            if (isElementInViewport(element)) {
+                element.classList.add("appear");
+            }
+        });
+    }
+
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 });
-
+ */
 
 window.addEventListener('scroll', function() {
     let navbar = document.getElementById('changeColor');
