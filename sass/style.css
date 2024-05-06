@@ -120,7 +120,7 @@ body {
 }
 .ContainerAbout .name {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 3rem;
   margin-top: 100px;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
@@ -322,7 +322,7 @@ body {
     padding-bottom: 5px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease, text-shadow 0.3s ease;
-    text-transform: lowercase;
+    text-transform: uppercase;
   }
   .ContainerNavbar .MenuDesktop ul li a::after {
     content: "";
@@ -405,7 +405,7 @@ body {
     padding-bottom: 5px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease, text-shadow 0.3s ease;
-    text-transform: lowercase;
+    text-transform: uppercase;
   }
   .ContainerNavbar .MenuDesktop ul li a::after {
     content: "";
@@ -1354,8 +1354,13 @@ form {
   gap: 1rem;
 }
 .FooterContainer .ContactInfo .ContainerContact .social {
+  margin: 0.5rem;
+  background-color: white;
+  border-radius: 100%;
+  padding: 0.3rem;
   width: 25px;
   height: 25px;
+  border: solid 1px black;
 }
 .FooterContainer .ContactInfo .Contact {
   text-shadow: 0 0px 4px rgba(150, 150, 150, 0.678);
@@ -1435,14 +1440,14 @@ form {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 6rem;
+    gap: 16rem;
   }
   .FooterContainer .ContactInfo .branding .brand {
     width: 250px;
     height: auto;
   }
   .FooterContainer .ContactInfo .ContainerInfoContact {
-    color: wheat;
+    color: white;
   }
   .FooterContainer .ContactInfo .ContainerInfoContact .ContainerContact {
     justify-content: start;

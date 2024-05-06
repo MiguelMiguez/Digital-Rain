@@ -35,9 +35,15 @@
             justify-content: center;
             align-items: center;
             gap: 1rem;
+            
             .social{
+                margin: 0.5rem;
+                background-color: white;
+                border-radius: 100%;
+                padding: 0.3rem;
                 width: 25px;
                 height: 25px;
+                border: solid 1px black;
             }
 
         }    
@@ -144,9 +150,10 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            gap: 6rem;
+            gap: 16rem;
 
             .branding{
+                
                 .brand{
                     width: 250px;
                     height: auto;
@@ -154,7 +161,7 @@
             }
 
             .ContainerInfoContact{
-                color: wheat;
+                color: white;
                .ContainerContact{
                 justify-content: start;
                }

@@ -310,7 +310,7 @@
                         padding-bottom: 5px;
                         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
                         transition: color 0.3s ease, text-shadow 0.3s ease; 
-                        text-transform: lowercase;
+                        text-transform: uppercase;
         
                         &::after { 
                             content: '';
@@ -428,7 +428,7 @@
                         padding-bottom: 5px;
                         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
                         transition: color 0.3s ease, text-shadow 0.3s ease; 
-                        text-transform: lowercase;
+                        text-transform: uppercase;
         
                         &::after { 
                             content: '';
