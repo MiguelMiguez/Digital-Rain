@@ -4,22 +4,17 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $number = $_POST['number'];
 
-
-$to = "miguelmiguezangel@gmail.com";
-
+$my_mail = "miguelmiguezangel@gmail.com";
 
 $subject = "Mensaje de contacto desde el sitio web";
-
 
 $message = "Nombre: $name\n";
 $message .= "Email: $email\n";
 $message .= "Teléfono: $number\n";
 
+$headers = "From: $my_mail";
 
-$headers = "From: $email";
-
-
-$mail_success = mail($to, $subject, $message, $headers);
+$mail_success = mail($my_mail, $subject, $message, $headers);
 
 header('Location:../page/email.html');
 ?>
